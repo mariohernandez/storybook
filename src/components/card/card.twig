@@ -1,0 +1,77 @@
+{{ attach_library('theme-name/card') }}
+
+<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+
+  {# Date for wide card. #}
+  {% if 'card--wide' in modifier %}
+    <div class="card__featured--date">
+      {% block featured_date %}
+        {{ date }}
+      {% endblock featured_date %}
+    </div>
+  {% endif %}
+
+  {% if image %}
+    <div class="card__media">
+      {{ image }}
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if title %}
+      {{ title_prefix }}
+      {%
+        include '@components/title/title.twig' with {
+          title: title
+        } only
+      %}
+      {{ title_suffix }}
+    {% endif %}
+
+    {# Date for featured content cards. #}
+    {% if 'card--wide' not in modifier %}
+      <div class="card__date">
+        {% block card_date %}
+          {{ date }}
+        {% endblock card_date %}
+      </div>
+    {% endif %}
+
+    {% if category %}
+      <div class="card__category">
+        {{ category }}
+      </div>
+    {% endif %}
+
+    {% if teaser %}
+      <div class="card__teaser">
+        {{ teaser }}
+      </div>
+    {% endif %}
+
+    {% block tags %}
+      {% if tags %}
+        <ul class="tags">
+          {% for item in tags %}
+            <li class="tag__item">
+              <a href="{{ item.url }}" class="tag__link">
+                {{ item.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endblock tags %}
+
+    {% if author %}
+      <div class="author">
+        <div class="author__meta">
+          <div class="author__name">{{ author.name }}</div>
+          <div class="author__title">{{ author.title }}</div>
+        </div>
+        <div class="author__photo">{{ author.photo }}</div>
+      </div>
+    {% endif %}
+  </div>
+</article>
