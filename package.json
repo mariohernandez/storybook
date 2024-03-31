@@ -12,10 +12,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.1.0",
     "drupal-attribute": "^1.0.2",
     "html-react-parser": "^5.1.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "twig-drupal-filters": "^3.2.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",

@@ -22,6 +22,16 @@ export const CardStacked = {
   args: { ...data },
 };
 
+export const CardWide = {
+  name: 'Card wide',
+  render: (args) => parse(card(args)),
+  args: {
+    ...data,
+    modifier: 'card--wide',
+    tags: ''
+  },
+};
+
 // Finally export the default object, `component`.
 // This name is optional, but Storybook requires this step.
 export default component;

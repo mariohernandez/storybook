@@ -1,6 +1,6 @@
 {{ attach_library('theme-name/card') }}
 
-<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+<article class="card{{- modifier ? ' ' ~ modifier -}}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
 
   {# Date for wide card. #}
