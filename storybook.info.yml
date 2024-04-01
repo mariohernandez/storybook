@@ -1,0 +1,19 @@
+name: Storybook
+type: theme
+description: 'A bare bones Drupal 10+ theme using Storybook 8+ and Vite.'
+package: Core
+core_version_requirement: ^9 || ^10
+base theme: false
+
+libraries:
+  - storybook/global
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content_above: Content Above
+  content: Content
+  content_below: Content Below
+  footer: Footer
+  theme: Theme

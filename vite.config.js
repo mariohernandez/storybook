@@ -5,18 +5,13 @@ import twig from 'vite-plugin-twig-drupal';
 import { join } from "node:path"
 export default defineConfig({
   plugins: [
-    twig({
-      namespaces: {
-        components: join(__dirname, "./src/components"),
-      },
-    }),
-    // Twig namespaces for including components.
+    // Twig namespaces for including components in twig.
     twig({
       namespaces: {
         components: join(__dirname, './src/components'),
       },
     }),
-    // YML for including data.
+    // YML for including data from yml to twig.
     yml(),
   ],
 })
