@@ -1,14 +1,14 @@
 /** @type { import('@storybook/react').Preview } */
 import Twig from 'twig';
-import twigDrupal from 'twig-drupal-filters';
+import drupalFilters from 'twig-drupal-filters';
 
-function setupTwig(twig) {
+function setupFilters(twig) {
   twig.cache();
-  twigDrupal(twig);
+  drupalFilters(twig);
   return twig;
 }
 
-setupTwig(Twig);
+setupFilters(Twig);
 
 const preview = {
   parameters: {

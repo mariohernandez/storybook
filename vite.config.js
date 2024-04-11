@@ -1,17 +1,18 @@
-/* eslint no-undef: "off" */
-import yml from '@modyfi/vite-plugin-yaml';
+/* eslint-disable */
+
 import { defineConfig } from "vite"
+import yml from '@modyfi/vite-plugin-yaml';
 import twig from 'vite-plugin-twig-drupal';
 import { join } from "node:path"
 export default defineConfig({
   plugins: [
-    // Twig namespaces for including components in twig.
     twig({
       namespaces: {
-        components: join(__dirname, './src/components'),
+        components: join(__dirname, "./src/components"),
+        // Other namespaces maybe be added.
       },
     }),
-    // YML for including data from yml to twig.
+    // Allows Storybook to read data from YAML files.
     yml(),
   ],
 })

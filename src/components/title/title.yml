@@ -1,6 +1,5 @@
 ---
-title:
-  level: 1
-  modifier: ''
-  text: 'Welcome to building a Drupal theme with Storybook'
-  url: ''
+level: 1
+modifier: 'my-title'
+text: 'Welcome to your new Drupal theme with Storybook!'
+url: ''
