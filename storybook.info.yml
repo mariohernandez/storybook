@@ -1,6 +1,6 @@
 name: Storybook
 type: theme
-description: 'A bare bones Drupal 10+ theme using Storybook 8+ and Vite.'
+description: 'A bare bones Drupal 10+ theme using Storybook 8 and ViteJS.'
 package: Core
 core_version_requirement: ^9 || ^10
 base theme: false

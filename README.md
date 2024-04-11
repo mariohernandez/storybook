@@ -1,15 +1,13 @@
 # Drupal 10+ theme with Storybook support
 
-This template provides a minimal setup to get React working in [Vite](https://vitejs.dev/) with HMR and some ESLint rules.
-In addition, it integrates Storybook 8+ as a way to create components with Twig and YML and render them in Storybook as React stories.
-
-The project still lacks many of the automation found in most modern front-end projects.  The main objective of this project is to show how Storybook is able to render components that were written in Twig.  CSS and JS compiling is not currently in place.
+This is a minimal setup of a Drupal 10 theme with Storybook support.  It uses [ViteJS](https://vitejs.dev/) as its build tool which offers HMR and some ESLint rules.
+The project still lacks many of the automation found in most modern front-end projects.  The main objective of this project is to show how Storybook is able to render components that were written in Twig.
 
 ## Running this project
 
 1. Clone this repo
 1. Run `cd storybook` (or the directory name you used when cloning the repo)
-1. Run `nvm install` - You need to have nvm installed in your computer.
+1. Run `nvm install` - You need to have nvm installed. This project uses NodeJS v20.5
 1. Run `npm install` - This will install all the npm packages in `package.json`
 1. Run `npm run storybook` - Will build and launch Storybook in the browser.
 
