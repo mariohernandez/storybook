@@ -19,6 +19,6 @@ You should see the Title Story.  If you change the values in the Controls, you w
 
 - `.nvmrc` in the root of this project defines the version of NodeJS this project uses.
 - `index.html` in the root of the project was added by ViteJS.  You can ignore it and even delete it.
-- `storybook.info` and `storybook.libraries.yml` are only for demo purposes.
+- `storybook.info.yml` and `storybook.libraries.yml` are only for demo purposes.
 
 by: [Mario Hernandez](https://mariohernandez.io)
