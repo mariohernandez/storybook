@@ -8,7 +8,7 @@
   flex: 1 1 var(--size-44);
   flex-direction: column;
   height: auto;
-  max-width: var(--size-80);
+  max-width: 46rem;
   overflow: hidden;
 }
 
@@ -21,19 +21,8 @@ using margin-top: auto in the date wrapper field below. */
   padding: var(--size-4);
 
   /* For consistent top/bottom spacing for all fields in the card. */
-  > *:not(.date) {
+  > * {
     margin-block-end: var(--size-3);
-  }
-}
-
-.card__title {
-  color: var(--ucla-blue);
-  font-family: var(--font-heading);
-  font-size: var(--font-size-2);
-  line-height: var(--leading-normal);
-
-  &:hover {
-    color: var(--gray-900);
   }
 }
 

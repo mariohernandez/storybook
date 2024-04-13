@@ -2,7 +2,7 @@ modifier: ''
 image: <img src="https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__576w/public/collaborodam_assets/tours-soh-tour-web-16-9.jpg.webp" alt="placeholder text" />
 title:
   level: 2
-  modifier: 'card__title'
+  modifier: ''
   text: 'Tours & Experiences'
   url: 'https://mariohernandez.io'
 teaser: 'Step inside for a tour. We offer a variety of tours and experiences to explore the building’s architecture, take you backstage, and uncover the best food and drink. Tours are offered in different languages and for different levels of mobility.'

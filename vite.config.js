@@ -1,21 +1,23 @@
 /* eslint-disable */
 
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
 import yml from '@modyfi/vite-plugin-yaml';
 import twig from 'vite-plugin-twig-drupal';
-import { join } from "node:path"
+import { join } from 'node:path'
 export default defineConfig({
   root: 'src',
   publicDir: 'public',
   build: {
     emptyOutDir: true,
-    outDir: "../dist",
+    outDir: '../dist',
     rollupOptions: {
       input: {
-        "card": "./src/components/card/card.css",
+        'reset': './src/css/reset.css',
+        'styles': './src/css/styles.css',
+        'card': './src/components/card/card.css',
       },
       output: {
-        assetFileNames: "css/[name].css",
+        assetFileNames: 'css/[name].css',
       },
     },
     sourcemap: true,
@@ -23,7 +25,7 @@ export default defineConfig({
   plugins: [
     twig({
       namespaces: {
-        components: join(__dirname, "./src/components"),
+        components: join(__dirname, './src/components'),
         // Other namespaces maybe be added.
       },
     }),
