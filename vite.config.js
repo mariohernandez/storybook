@@ -5,6 +5,21 @@ import yml from '@modyfi/vite-plugin-yaml';
 import twig from 'vite-plugin-twig-drupal';
 import { join } from "node:path"
 export default defineConfig({
+  root: 'src',
+  publicDir: 'public',
+  build: {
+    emptyOutDir: true,
+    outDir: "../dist",
+    rollupOptions: {
+      input: {
+        "card": "./src/components/card/card.css",
+      },
+      output: {
+        assetFileNames: "css/[name].css",
+      },
+    },
+    sourcemap: true,
+  },
   plugins: [
     twig({
       namespaces: {

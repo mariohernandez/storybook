@@ -3,6 +3,8 @@
 This is a minimal setup of a Drupal 10 theme with Storybook support.  It uses [ViteJS](https://vitejs.dev/) as its build tool which offers HMR and some ESLint rules.
 The project still lacks many of the automation found in most modern front-end projects.  The main objective of this project is to show how Storybook is able to render components that were written in Twig.
 
+Read the [blog post](https://mariohernandez.io/blog/building-a-modern-drupal-theme-with-storybook/){target=_blank} where I explain how this project was put together.
+
 ## Running this project
 
 **Note**: You need NodeJS 18 or higher.

@@ -1,0 +1,52 @@
+/**
+* @file
+* Card component which includes title components.
+*/
+
+.card {
+  display: flex;
+  flex: 1 1 var(--size-44);
+  flex-direction: column;
+  height: auto;
+  max-width: var(--size-80);
+  overflow: hidden;
+}
+
+/* Using flex-grow to allow date to be positioned at the bottom of the card by
+using margin-top: auto in the date wrapper field below. */
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--size-4);
+
+  /* For consistent top/bottom spacing for all fields in the card. */
+  > *:not(.date) {
+    margin-block-end: var(--size-3);
+  }
+}
+
+.card__title {
+  color: var(--ucla-blue);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2);
+  line-height: var(--leading-normal);
+
+  &:hover {
+    color: var(--gray-900);
+  }
+}
+
+.card__date {
+  align-items: center;
+  display: flex;
+  font-weight: var(--font-weight-600);
+
+  .date {
+    font-weight: var(--font-weight-600);
+
+    svg {
+      margin-inline-end: var(--size-2);
+    }
+  }
+}
