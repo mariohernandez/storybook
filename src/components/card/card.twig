@@ -1,6 +1,6 @@
 {{ attach_library('storybook/card') }}
 
-<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<article class="card{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="card__image">
       <figure>
@@ -11,12 +11,14 @@
 
   <div class="card__content">
     {% if title %}
-      {% include "@components/title/title.twig" with {
-        'level': title.level,
-        'modifier': title.modifier,
-        'text': title.text,
-        'url': title.url,
-      } only %}
+      <header class="card__header">
+        {% include "@components/title/title.twig" with {
+          'level': title.level,
+          'modifier': title.modifier,
+          'text': title.text,
+          'url': title.url,
+        } only %}
+      </header>
     {% endif %}
 
     {% if teaser %}

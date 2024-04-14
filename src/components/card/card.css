@@ -4,10 +4,7 @@
 */
 
 .card {
-  display: flex;
-  flex: 1 1 var(--size-44);
-  flex-direction: column;
-  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   max-width: 46rem;
   overflow: hidden;
 }
@@ -15,27 +12,14 @@
 /* Using flex-grow to allow date to be positioned at the bottom of the card by
 using margin-top: auto in the date wrapper field below. */
 .card__content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: var(--size-4);
+  padding: 2rem;
 
   /* For consistent top/bottom spacing for all fields in the card. */
   > * {
-    margin-block-end: var(--size-3);
+    margin-block-end: 1.4rem;
   }
 }
 
-.card__date {
-  align-items: center;
-  display: flex;
-  font-weight: var(--font-weight-600);
-
-  .date {
-    font-weight: var(--font-weight-600);
-
-    svg {
-      margin-inline-end: var(--size-2);
-    }
-  }
+.card__title {
+  margin-block-start: 0;
 }
