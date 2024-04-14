@@ -13,14 +13,13 @@ Read the [blog post](https://mariohernandez.io/blog/building-a-modern-drupal-the
 1. Run `cd storybook` (or the directory name you used when cloning the repo)
 1. Run `nvm install` - You need to have nvm installed. This project uses NodeJS v20.5
 1. Run `npm install` - This will install all the npm packages in `package.json`
+1. Run `npm run build` - This will build static assets like CSS.
 1. Run `npm run storybook` - Will build and launch Storybook in the browser.
 
-You should see the Title Story.  If you change the values in the Controls, you will be able to alter the title's behavior.  Try it.
+You should see the Card Story.
 
 ## More info on the project
 
-- `.nvmrc` in the root of this project defines the version of NodeJS this project uses.
-- `index.html` in the root of the project was added by ViteJS.  You can ignore it and even delete it.
-- `storybook.info.yml` and `storybook.libraries.yml` are only for demo purposes.
+Current CSS compiling task is only intended to generate the necessary styles for the Card component. A more elaborate compiling workflow should be implemented to handle additional components.
 
 by: [Mario Hernandez](https://mariohernandez.io)
