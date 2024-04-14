@@ -8,6 +8,11 @@ base theme: false
 libraries:
   - storybook/global
 
+components:
+  namespaces:
+    components:
+      - src/components
+
 regions:
   header: Header
   highlighted: Highlighted
