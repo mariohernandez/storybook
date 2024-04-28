@@ -14,7 +14,7 @@ export default defineConfig({
       input: {
         'reset': './src/css/reset.css',
         'styles': './src/css/styles.css',
-        'card': './src/components/card/card.css',
+        'card': './src/components/02-molecules/card/card.css',
       },
       output: {
         assetFileNames: 'css/[name].css',
@@ -25,7 +25,8 @@ export default defineConfig({
   plugins: [
     twig({
       namespaces: {
-        components: join(__dirname, './src/components'),
+        atoms: join(__dirname, './src/components/01-atoms'),
+        molecules: join(__dirname, './src/components/02-molecules'),
         // Other namespaces maybe be added.
       },
     }),

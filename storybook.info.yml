@@ -10,8 +10,10 @@ libraries:
 
 components:
   namespaces:
-    components:
-      - src/components
+    atoms:
+      - src/components/01-atoms
+    molecules:
+      - src/components/02-molecules
 
 regions:
   header: Header

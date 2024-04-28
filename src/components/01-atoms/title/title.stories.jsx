@@ -21,7 +21,7 @@ import data from './title.yml';
  * `args` uses the variables defined in title.yml as react arguments.
  */
 const component = {
-  title: 'Components/Title',
+  title: 'Atoms/Title',
 };
 
 /**

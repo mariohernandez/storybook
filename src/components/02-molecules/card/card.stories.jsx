@@ -5,7 +5,7 @@ import data from './card.yml';
 import './card.css';
 
 const settings = {
-  title: 'Components/Card',
+  title: 'Molecules/Card',
 };
 
 export const Card = {
