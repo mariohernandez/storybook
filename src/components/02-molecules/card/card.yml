@@ -1,4 +1,6 @@
-image: <img src="https://www.sydneyoperahouse.com/sites/default/files/styles/16x9__576w/public/collaborodam_assets/tours-soh-tour-web-16-9.jpg.webp" alt="placeholder text" />
+---
+modifier: ''
+image: <img src="https://source.unsplash.com/cHRDevKFDBw/640x360" alt="Palm trees near city buildings" />
 title:
   level: 2
   modifier: 'card__title'

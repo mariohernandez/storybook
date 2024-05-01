@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import { defineConfig } from 'vite'
 import yml from '@modyfi/vite-plugin-yaml';
 import twig from 'vite-plugin-twig-drupal';
@@ -27,7 +26,6 @@ export default defineConfig({
       namespaces: {
         atoms: join(__dirname, './src/components/01-atoms'),
         molecules: join(__dirname, './src/components/02-molecules'),
-        // Other namespaces maybe be added.
       },
     }),
     // Allows Storybook to read data from YAML files.

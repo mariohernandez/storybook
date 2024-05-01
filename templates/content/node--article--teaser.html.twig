@@ -68,54 +68,18 @@
 #}
 
 {% set render_content = content|render %}
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
 
 {% set article_title = {
-  'level': 2,
-  'modifier': 'article__title',
-  'text': label,
-  'url': url,
-} %}
+    'level': 2,
+    'modifier': 'card__title',
+    'text': label,
+    'url': url,
+  }
+%}
 
-{% include "@components/card/card.twig" with {
-  attributes: attributes.addClass(classes),
-  'modifier': '',
+{% include '@molecules/card/card.twig' with {
+  'attributes': attributes.addClass(classes),
   'image': content.field_image,
   'title': article_title,
   'teaser': content.body,
 } only %}
-{#
-<article{{ attributes.addClass(classes) }}>
-  <header>
-    {{ title_prefix }}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        <span{{ author_attributes }}>
-          {{ 'By'|t }} {% apply spaceless %}<span class="node__author">{{ author_name }}</span>{% endapply %}, {{ date }}
-        </span>
-        {{ metadata }}
-      </div>
-    {% endif %}
-    {% if label and not page %}
-      <div class="node__top-wrapper">
-        {{ content.field_image }}
-        <h2{{ title_attributes.addClass('node__title') }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-      </div>
-    {% endif %}
-  </header>
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_image', 'links') }}
-  </div>
-</article> #}
