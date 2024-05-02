@@ -67,8 +67,27 @@
  */
 #}
 
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{# Setting a variable with `content|render` allows Drupal to become aware of
+the entire content array of the page and in turn be able to handle caching.
+Learn more: https://www.drupal.org/docs/drupal-apis/render-api/render-arrays #}
 {% set render_content = content|render %}
 
+{# Since the title component we created in Storybook uses a specific data
+structure, we are setting a variable we can use in Drupal which matches
+the same data structure as the title component. This allows us to easily map
+each field property one-to-one while also using the proper Drupal variables
+such as `label` and `url`. #}
 {% set article_title = {
     'level': 2,
     'modifier': 'card__title',
@@ -77,9 +96,28 @@
   }
 %}
 
+{# This is an optional variable for the body field. The issue I experienced
+was that since the body field in Drupal uses a type of Text Long (WYSIWYG),
+it was printing with extra markup that conflicted with the markup in our
+Storybook component. This variable allows us to strip the html tags from
+the rendered field so only our component's markup is used when rendering.
+Another option would be to not include the `<p>` tag in the Storybook
+component, but this means the teaser text will not be inside any html
+tag which is not recommended. #}
+{% set article_teaser %}
+  {{ content.body }}
+{% endset %}
+
+{# This is the Twig include that allows us to nest the Card component to map
+each of its fields with Drupal. For those fields we created variables for
+above, we print the variable names we created.
+In addition, we are passing the `attributes` variable and within it we
+are passing the array variable of `classes` to ensure the Card component
+will print all the attributes is passing as art of the `classes` variable
+up around line 71. #}
 {% include '@molecules/card/card.twig' with {
   'attributes': attributes.addClass(classes),
   'image': content.field_image,
   'title': article_title,
-  'teaser': content.body,
+  'teaser': article_teaser|striptags,
 } only %}
