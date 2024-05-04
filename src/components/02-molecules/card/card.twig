@@ -24,5 +24,12 @@
     {% if teaser %}
       <p class="card__teaser">{{ teaser }}</p>
     {% endif %}
+
+    {% if cta %}
+      <footer class="card__footer">
+        <a href="{{ cta.url }}" class="button{% if cta.modifier %} {{ cta.modifier }}{% endif %}">{{ cta.text }}</a>
+      </footer>
+    {% endif %}
+
   </div>
 </article>

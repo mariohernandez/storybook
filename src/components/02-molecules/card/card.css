@@ -3,10 +3,28 @@
 * Card component which includes title components.
 */
 
+@import '../../../css/utilities';
+@import '../../../css/button';
+
 .card {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  max-width: 46rem;
+  max-width: 36rem;
   overflow: hidden;
+
+  &.card--horizontal {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 180px 1fr;
+    max-width: 60rem;
+
+    .card__image {
+      max-width: 30rem;
+    }
+  }
+
+  &.card--small {
+    max-width: 25rem;
+  }
 }
 
 /* Using flex-grow to allow date to be positioned at the bottom of the card by
@@ -21,5 +39,14 @@ using margin-top: auto in the date wrapper field below. */
 }
 
 .card__title {
+  font-size: var(--size-18);
   margin-block-start: 0;
+}
+
+.card__footer {
+  border-block-start: 1px solid #ddd;
+  display: flex;
+  margin: 0;
+  margin-block-start: var(--size-20);
+  padding-block-start: 2rem;
 }
