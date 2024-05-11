@@ -3,8 +3,6 @@ import parse from 'html-react-parser';
 import card from './card.twig';
 import data from './card.yml';
 import dataHorizontal from './card-horizontal.yml';
-import dataSmall from './card-small.yml';
-
 import './card.css';
 
 const component = {
@@ -15,27 +13,6 @@ export const Card = {
   name: 'Card stacked',
   render: (args) => parse(card(args)),
   args: { ...data },
-};
-
-export const CardHorizontal = {
-  ...Card,
-  name: 'Card horizontal',
-  render: (args) => parse(card(args)),
-  args: {
-    ...dataHorizontal,
-    modifier: 'card--horizontal',
-  },
-};
-
-export const CardSmall = {
-  ...Card,
-  name: 'Card small',
-  render: (args) => parse(card(args)),
-  args: {
-    ...dataSmall,
-    modifier: 'card--small',
-    cta: '',
-  },
 };
 
 export const CardLightCta = {
@@ -52,6 +29,17 @@ export const CardLightCta = {
   },
 };
 
+export const CardSmall = {
+  ...Card,
+  name: 'Card small',
+  render: (args) => parse(card(args)),
+  args: {
+    ...data,
+    modifier: 'card--small',
+    cta: '',
+  },
+};
+
 export const CardNoImage = {
   ...Card,
   name: 'Card no image',
@@ -60,6 +48,15 @@ export const CardNoImage = {
     ...data,
     modifier: 'card--no-image',
     image: '',
+  },
+};
+
+export const CardHorizontal = {
+  ...Card,
+  name: 'Card horizontal',
+  render: (args) => parse(card(args)),
+  args: {
+    ...dataHorizontal,
   },
 };
 

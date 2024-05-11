@@ -1,4 +1,4 @@
-# Drupal 10+ theme with Storybook support
+# Drupal 10 theme with Storybook support
 
 ## About this repo
 
