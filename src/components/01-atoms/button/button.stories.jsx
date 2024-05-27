@@ -10,7 +10,6 @@ import parse from 'html-react-parser';
  */
 import title from './button.twig';
 import data from './button.yml';
-import './button.css';
 
 /**
  * Next we define a default configuration for the component to use.
