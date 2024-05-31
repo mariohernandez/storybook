@@ -12,7 +12,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'reset': './src/css/reset.css',
-        'styles': './src/css/styles.css',
+        'base': './src/css/base.css',
+        'utilities': './src/css/utilities.css',
+        'title': './src/components/01-atoms/title/title.css',
+        'button': './src/components/01-atoms/button/button.css',
         'card': './src/components/02-molecules/card/card.css',
       },
       output: {

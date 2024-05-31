@@ -2,7 +2,11 @@
 import Twig from 'twig';
 import drupalFilters from 'twig-drupal-filters';
 import '../dist/css/reset.css';
-import '../dist/css/styles.css';
+import '../dist/css/base.css';
+import '../dist/css/utilities.css';
+import '../dist/css/button.css';
+import '../dist/css/title.css';
+import '../dist/css/card.css';
 
 function setupFilters(twig) {
   twig.cache();

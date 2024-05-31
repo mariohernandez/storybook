@@ -3,9 +3,6 @@
 * Card component which includes title components.
 */
 
-@import '../../../css/utilities';
-@import '../../../css/button';
-
 .card {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   max-width: 36rem;

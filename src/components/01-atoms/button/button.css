@@ -1,8 +1,9 @@
 .button {
   background-color: rebeccapurple;
+  border: 1px solid rebeccapurple;
   color: white;
   display: inline-block;
   font-size: 18px;
-  padding: 20px;
+  padding: 8px 20px;
   text-decoration: none;
 }
