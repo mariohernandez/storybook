@@ -1,12 +1,25 @@
 name: Storybook
 type: theme
-description: 'A bare bones Drupal 10+ theme using Storybook 8 and ViteJS.'
+description: 'A bare bones Drupal 10 theme using Storybook 8 and ViteJS.'
 package: Core
 core_version_requirement: ^9 || ^10
 base theme: false
 
 libraries:
   - storybook/global
+
+components:
+ namespaces:
+    atoms:
+      - src/components/01-atoms
+    molecules:
+      - src/components/02-molecules
+    organisms:
+      - src/components/03-organisms
+    layouts:
+      - src/components/04-layouts
+    pages:
+      - src/components/05-pages
 
 regions:
   header: Header

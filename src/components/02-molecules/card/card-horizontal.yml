@@ -1,0 +1,10 @@
+---
+modifier: 'card--horizontal'
+image: <img src="./images/card-square.jpg" alt="Palm trees near city buildings" />
+title:
+  level: 2
+  modifier: 'card__title'
+  text: 'Step outside to the outdoors'
+  url: 'https://mariohernandez.io'
+teaser: 'With spring in full bloom, the weather could not be better to take a walk outside and enjoy the beauty of nature.'
+cta: ''

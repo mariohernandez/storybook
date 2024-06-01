@@ -1,0 +1,28 @@
+:where(html) {
+  /* Colors. */
+  --black: #000;
+  --white: #fff;
+  --color-primary: #029CFD;
+  --color-grey-dark: #323232;
+  --color-grey-medium: #999;
+  --color-grey-light: #ededed;
+
+  /* Sizes. */
+  --size-1: 1px;      /* 1px */
+  --size-2: 2px;      /* 2px */
+  --size-4: 4px;      /* 4px */
+  --size-5: 5px;      /* 5px */
+  --size-6: 6px;      /* 6px */
+  --size-8: 8px;      /* 8px */
+  --size-10: 1rem;    /* 10px */
+  --size-12: 1.2rem;  /* 12px */
+  --size-14: 1.4rem;  /* 14px */
+  --size-16: 1.6rem;  /* 16px */
+  --size-18: 1.8rem;  /* 18px */
+  --size-20: 2rem;    /* 20px */
+
+  /* Transitions, */
+  --transition-color-04s: color 0.4s ease-in-out;
+  --transition-background-color-04s: background-color 0.4s ease-in-out;
+  --transition-border-color-04s: border-color 0.4s ease-in-out;
+}

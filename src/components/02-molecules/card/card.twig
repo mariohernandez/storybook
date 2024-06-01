@@ -1,0 +1,35 @@
+{{ attach_library('storybook/card') }}
+
+<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  {% if image %}
+    <div class="card__image">
+      <figure>
+        {{ image }}
+      </figure>
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if title %}
+      <header class="card__header">
+        {% include "@atoms/title/title.twig" with {
+          'level': title.level,
+          'modifier': title.modifier,
+          'text': title.text,
+          'url': title.url,
+        } only %}
+      </header>
+    {% endif %}
+
+    {% if teaser %}
+      <p class="card__teaser">{{ teaser }}</p>
+    {% endif %}
+
+    {% if cta %}
+      <footer class="card__footer">
+        <a href="{{ cta.url }}" class="button{% if cta.modifier %} {{ cta.modifier }}{% endif %}">{{ cta.text }}</a>
+      </footer>
+    {% endif %}
+
+  </div>
+</article>
