@@ -20,6 +20,8 @@ components:
       - src/components/04-layouts
     pages:
       - src/components/05-pages
+    templates:
+      - src/templates
 
 regions:
   header: Header
