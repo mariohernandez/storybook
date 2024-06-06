@@ -3,7 +3,9 @@ import Twig from 'twig';
 import drupalFilters from 'twig-drupal-filters';
 import '../src/styles.css'; /* Contains reset, base, and utilities styles. */
 import '../src/components/components.css'; /* Contains all components CSS. */
-import '../src/components/02-molecules/card/card';
+
+// If JS was needed, this is how it can be imported on a Component.
+// import '../src/components/02-molecules/card/card';
 
 function setupFilters(twig) {
   twig.cache();
