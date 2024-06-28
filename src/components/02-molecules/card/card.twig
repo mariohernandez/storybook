@@ -1,6 +1,4 @@
-{{ attach_library('storybook/card') }}
-
-<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<article class="card{{ modifier ? ' ' ~ modifier }}">
   {% if image %}
     <div class="card__image">
       <figure>
@@ -34,6 +32,5 @@
         } only %}
       </footer>
     {% endif %}
-
   </div>
 </article>
