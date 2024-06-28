@@ -1,6 +1,6 @@
 ---
 modifier: 'card--horizontal'
-image: <img src="./images/card-square.jpg" alt="Palm trees near city buildings" />
+image: <img src="images/card-square.jpg" alt="Hills with pines in the background" />
 title:
   level: 2
   modifier: 'card__title'

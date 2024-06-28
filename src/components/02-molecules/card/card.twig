@@ -27,7 +27,11 @@
 
     {% if cta %}
       <footer class="card__footer">
-        <a href="{{ cta.url }}" class="button{% if cta.modifier %} {{ cta.modifier }}{% endif %}">{{ cta.text }}</a>
+        {% include "@atoms/button/button.twig" with {
+          'modifier': cta.modifier,
+          'text': cta.text,
+          'url': cta.url,
+        } only %}
       </footer>
     {% endif %}
 
