@@ -17,49 +17,4 @@ export const Card = {
   args: { ...data },
 };
 
-export const CardLightCta = {
-  ...Card,
-  name: 'Card light CTA',
-  render: (args) => parse(card(args)),
-  args: {
-    ...data,
-    cta: {
-      modifier: 'button--light',
-      text: 'Try it now',
-      url: 'https://mariohernandez.io',
-    }
-  },
-};
-
-export const CardSmall = {
-  ...Card,
-  name: 'Card small',
-  render: (args) => parse(card(args)),
-  args: {
-    ...data,
-    modifier: 'card--small',
-    cta: '',
-  },
-};
-
-export const CardNoImage = {
-  ...Card,
-  name: 'Card no image',
-  render: (args) => parse(card(args)),
-  args: {
-    ...data,
-    modifier: 'card--no-image',
-    image: '',
-  },
-};
-
-export const CardHorizontal = {
-  ...Card,
-  name: 'Card horizontal',
-  render: (args) => parse(card(args)),
-  args: {
-    ...dataHorizontal,
-  },
-};
-
 export default component;
