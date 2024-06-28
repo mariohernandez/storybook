@@ -1,88 +1,31 @@
-.button:not(:where([class~='prose'] *, .button--link)) {
-  align-items: center;
-  appearance: none;
-  background-color: var(--gray-300);
-  border-color: var(--gray-300);
-  border-radius: 0;
-  border-width: 1px;
-  color: var(--black);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: var(--font-system);
-  font-size: var(--font-size-1);
-  font-weight: var(--font-weight-700);
-  justify-content: center;
-  line-height: var(--leading-none);
-  padding-block: var(--size-4);
-  padding-inline: var(--size-6);
-  position: relative;
-  transition: var(--transition-soft-linear);
+.button {
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--white);
+  display: inline-block;
+  font-size: var(--size-14);
+  font-weight: 600;
+  margin-inline-start: auto;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition-background-color-04s), var(--transition-color-04s), var(--transition-border-color-04s);
   white-space: nowrap;
-  width: fit-content;
 
-  &:visited {
-    color: var(--black);
+  &.button--light {
+    background-color: var(--white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+
+    &:hover {
+      border-color: var(--color-grey-dark);
+      color: var(--black);
+    }
   }
 
   &:hover {
-    background-color: var(--gray-200);
-    border-color: var(--gray-300);
+    background-color: var(--white);
+    color: var(--color-primary);
   }
-
-  &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--gray-400), 0 0 var(--white);
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-
-  &[aria-expanded='true'] {
-    &:focus::after {
-      border-color: var(--gray-300);
-    }
-  }
-
-  &:disabled {
-    background-color: var(--gray-300);
-    color: var(--gray-500);
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  /* If two buttons are added, this should add some separation. */
-  + .button {
-    margin-block: var(--size-4);
-
-    @media (--laptop) {
-      margin-block: 0;
-      margin-inline-start: var(--size-2);
-    }
-  }
-
-  svg {
-    display: inline-block;
-    height: 1em;
-    margin-inline-start: var(--size-2);
-    width: 1em;
-
-    path {
-      color: inherit;
-    }
-  }
-}
-
-
-/* Outlined button. */
-.button--outlined {
-  background-color: transparent;
-  border-color: currentColor;
-  font-family: var(--font-body);
-
-  &:hover {
-    background-color: var(--black);
-    color: var(--white);
-  }
-}
-
-.button--link {
-  color: inherit;
 }

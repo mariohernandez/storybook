@@ -1,8 +1,12 @@
 /** @type { import('@storybook/react').Preview } */
 import Twig from 'twig';
 import drupalFilters from 'twig-drupal-filters';
-import '../dist/css/reset.css';
-import '../dist/css/styles.css';
+import '../src/css/reset.css';
+import '../src/css/base.css';
+import '../src/css/utilities.css';
+import '../src/components/01-atoms/button/button.css';
+import '../src/components/01-atoms/title/title.css';
+import '../src/components/02-molecules/card/card.css';
 
 function setupFilters(twig) {
   twig.cache();

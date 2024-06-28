@@ -1,13 +1,10 @@
 ---
-modifier: ''
-image: <img src="images/card.jpg" alt="Hills with pines in the background" />
+modifier: 'card--horizontal'
+image: <img src="images/card-square.jpg" alt="Hills with pines in the background" />
 title:
   level: 2
   modifier: 'card__title'
   text: 'Step outside to the outdoors'
   url: 'https://mariohernandez.io'
 teaser: 'With spring in full bloom, the weather could not be better to take a walk outside and enjoy the beauty of nature.'
-cta:
-  modifier: ''
-  text: 'Try it now'
-  url: 'https://mariohernandez.io'
+cta: ''

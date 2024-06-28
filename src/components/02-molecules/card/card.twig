@@ -1,6 +1,4 @@
-{{ attach_library('storybook/card') }}
-
-<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<article class="card{{ modifier ? ' ' ~ modifier }}">
   {% if image %}
     <div class="card__image">
       <figure>
@@ -23,6 +21,16 @@
 
     {% if teaser %}
       <p class="card__teaser">{{ teaser }}</p>
+    {% endif %}
+
+    {% if cta %}
+      <footer class="card__footer">
+        {% include "@atoms/button/button.twig" with {
+          'modifier': cta.modifier,
+          'text': cta.text,
+          'url': cta.url,
+        } only %}
+      </footer>
     {% endif %}
   </div>
 </article>
