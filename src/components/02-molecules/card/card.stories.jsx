@@ -7,18 +7,17 @@ import './card.css';
 
 const component = {
   title: 'Molecules/Card',
+  render: (args) => parse(card(args)),
 };
 
 export const Card = {
   name: 'Card stacked',
-  render: (args) => parse(card(args)),
   args: { ...data },
 };
 
 export const CardLightCta = {
   ...Card,
   name: 'Card light CTA',
-  render: (args) => parse(card(args)),
   args: {
     ...data,
     cta: {
@@ -32,7 +31,6 @@ export const CardLightCta = {
 export const CardSmall = {
   ...Card,
   name: 'Card small',
-  render: (args) => parse(card(args)),
   args: {
     ...data,
     modifier: 'card--small',
@@ -43,7 +41,6 @@ export const CardSmall = {
 export const CardNoImage = {
   ...Card,
   name: 'Card no image',
-  render: (args) => parse(card(args)),
   args: {
     ...data,
     modifier: 'card--no-image',
@@ -54,7 +51,6 @@ export const CardNoImage = {
 export const CardHorizontal = {
   ...Card,
   name: 'Card horizontal',
-  render: (args) => parse(card(args)),
   args: {
     ...dataHorizontal,
   },
